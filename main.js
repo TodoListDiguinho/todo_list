@@ -50,8 +50,11 @@ function renderizar(id)
 	var div = document.createElement('div');
 	div.id='div'+id;
 	div.className='itemDiv';
-	div.onclik=tarefaCompleta
+	div.onclik=tarefaCompleta;
 	var checkbox = document.createElement('input');
 	checkbox.type='checkbox';
+    checkbox.id='checkbox'+id;
+    var label = document.createElement('label');
+    
 
 }
