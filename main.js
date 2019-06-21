@@ -33,16 +33,25 @@ function deletarTarefa()
 function tarefaCompleta()
 {
     //Aqui a tarefa ira desaparecer da tela, uma coisa a se pensar é chamar a função de deletar
+    console.log('Entrou na tarefa Completa');
 }
-function renderizar()
+function renderizar(id)
 {
     //Aqui cria os elementos html a partir do adicionar tarefa e carrega na tela
-    //<li>
-    //            <div class="itemDiv" onclick="tarefaCompleta()">
-   //             	Comer Pão  <i class="material-icons" onclick="deletarTarefa()">delete</i>   
-   //             </div>
-	//</li>
+            //<li>
+            //    <div class="itemDiv" onclick="tarefaCompleta()">
+            //    	<input type="checkbox" id="scales" name="scales">
+           //        <label>Comer Pão</label> 
+            //        <i class="material-icons" onclick="deletarTarefa()">delete</i>   
+          //      </div>
+		//	</li>
 	var li = document.createElement('li');
+	li..id='li'+id;
 	var div = document.createElement('div');
-	
+	div.id='div'+id;
+	div.className='itemDiv';
+	div.onclik=tarefaCompleta
+	var checkbox = document.createElement('input');
+	checkbox.type='checkbox';
+
 }

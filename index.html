@@ -9,24 +9,30 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
     <header class="faixa-superior">
-    	<h1>TODO LIST</h1> <i class="material-icons">add_box</i>
+    	<h1>TODO LIST</h1>
     </header>
+
+	<main class="conteudoPrincipal">
+		<ul id='listaTarefas'>
+			<li>
+                <div class="itemDiv" onclick="tarefaCompleta()">
+                	<input type="checkbox" id="scales" name="scales">
+                    <label>Comer Pão</label> 
+                    <i class="material-icons" onclick="deletarTarefa()">delete</i>   
+                </div>
+			</li>
+		</ul>
+	</main>
+
     <section class="addTarefa">
         <div>
             <label>Tarefa:</label> <input type="text" id="descTarefa">
             <button  onclick="adicionarTarefa()">Adicionar Tarefa</button>
         </div>
     </section>
-	<main class="conteudoPrincipal">
-		<ul id='listaTarefas'>
-			<li>
-                <div class="itemDiv" onclick="tarefaCompleta()">
-                	Comer Pão  <i class="material-icons" onclick="deletarTarefa()">delete</i>   
-                </div>
-			</li>
-		</ul>
-	</main>
+
     <script src="main.js"></script>
 </body>
 </html>
