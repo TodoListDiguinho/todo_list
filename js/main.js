@@ -1,22 +1,6 @@
 var tarefas = [];
 var i = 0;
 
-class Tarefa 
-{
-    constructor()
-    {
-        this.id;
-        this.desc;
-        this.feito;
-    }
-    entrada()
-    {
-        this.id=tarefas.length;
-        this.desc=document.getElementById('descTarefa').value;
-        this.feito = false;
-    }
-}
-
 function adicionarTarefa()
 {
     //Aqui deve-se colocar o elemento no localstorage e renderizar o elemento na tela
