@@ -31,3 +31,11 @@
 	align-content: center;
 	justify-content: center;
 }
+.addTarefa
+{
+	margin-top: 25px;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}

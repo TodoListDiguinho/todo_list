@@ -10,8 +10,14 @@
 </head>
 <body>
     <header class="faixa-superior">
-    	<h1>TODO LIST</h1> <i class="material-icons" onclick="adicionarTarefa()">add_box</i>
+    	<h1>TODO LIST</h1> <i class="material-icons">add_box</i>
     </header>
+    <section class="addTarefa">
+        <div>
+            <label>Tarefa:</label> <input type="text" id="descTarefa">
+            <button  onclick="adicionarTarefa()">Adicionar Tarefa</button>
+        </div>
+    </section>
 	<main class="conteudoPrincipal">
 		<ul id='listaTarefas'>
 			<li>
