@@ -40,13 +40,7 @@ function tarefaCompleta()
 function renderizar(id,desc)
 {
     //Aqui cria os elementos html a partir do adicionar tarefa e carrega na tela
-            //<li>
-            //    <div class="itemDiv" onclick="tarefaCompleta()">
-            //      <input type="checkbox" id="scales" name="scales">
-           //        <label>Comer Pão</label> 
-            //        <i class="material-icons" onclick="deletarTarefa()">delete</i>   
-          //      </div>
-        //  </li>
+
     var lista = document.getElementById('listaTarefas');
     var li = document.createElement('li');
     li.id='li'+id;
