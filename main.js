@@ -1,19 +1,20 @@
 var tarefas = [];
+var i = 0;
 
 class Tarefa 
 {
-	constructor()
-	{
-		this.id;
-		this.desc;
-		this.feito;
-	}
-	entrada()
-	{
-		this.id=tarefas.length;
-		this.desc=document.getElementById('descTarefa').value;
-		this.feito = false;
-	}
+    constructor()
+    {
+        this.id;
+        this.desc;
+        this.feito;
+    }
+    entrada()
+    {
+        this.id=tarefas.length;
+        this.desc=document.getElementById('descTarefa').value;
+        this.feito = false;
+    }
 }
 
 function adicionarTarefa()
@@ -21,14 +22,15 @@ function adicionarTarefa()
     //Aqui deve-se colocar o elemento no localstorage e renderizar o elemento na tela
     var tarefa = new Tarefa();
     tarefa.entrada(); 
-    console.log(tarefa);
     tarefas.push(tarefa);
-    console.log(tarefas);
-
+    console.log(tarefas[i].id+' '+tarefas[i].desc);
+    renderizar(tarefas[i].id,tarefas[i].desc);
+    i++;
 }
 function deletarTarefa()
 {
     //Aqui deve-se deletar o elemento do localstorage e apagar da tela
+    console.log('Entrou em deletar tarefa');
 }
 function tarefaCompleta()
 {
@@ -40,19 +42,20 @@ function renderizar(id,desc)
     //Aqui cria os elementos html a partir do adicionar tarefa e carrega na tela
             //<li>
             //    <div class="itemDiv" onclick="tarefaCompleta()">
-            //    	<input type="checkbox" id="scales" name="scales">
+            //      <input type="checkbox" id="scales" name="scales">
            //        <label>Comer Pão</label> 
             //        <i class="material-icons" onclick="deletarTarefa()">delete</i>   
           //      </div>
-		//	</li>
-	var li = document.createElement('li');
-	li..id='li'+id;
-	var div = document.createElement('div');
-	div.id='div'+id;
-	div.className='itemDiv';
-	div.onclik=tarefaCompleta;
-	var checkbox = document.createElement('input');
-	checkbox.type='checkbox';
+        //  </li>
+    var lista = document.getElementById('listaTarefas');
+    var li = document.createElement('li');
+    li.id='li'+id;
+    var div = document.createElement('div');
+    div.id='div'+id;
+    div.className='itemDiv';
+    div.onclik=tarefaCompleta;
+    var checkbox = document.createElement('input');
+    checkbox.type='checkbox';
     checkbox.id='checkbox'+id;
     var label = document.createElement('label');
     label.innerHTML=desc;
@@ -60,5 +63,9 @@ function renderizar(id,desc)
     i.className='material-icons';
     i.onclick=deletarTarefa;
     i.innerHTML='delete';
-
+    div.appendChild(checkbox);
+    div.appendChild(label);
+    div.appendChild(i);
+    li.appendChild(div);
+    lista.appendChild(li);
 }
